@@ -1,0 +1,50 @@
+@import url('./../../../assets/styling.css');
+
+.educard {
+	padding: 10px 30px;
+}
+.card{
+	background: var(--light-color);
+	border: 1px solid #5C575755;
+	border-radius: 7px;
+}
+.date {
+	padding: 2px 4px;
+	font-size: 12px;
+	color: var(--dark-grey);
+	font-family: var(--secondary-regular);
+}
+.number {
+	background: var(--primary-color);
+	color: var(--light-color);
+	font-size: 12px;
+	text-align: center;
+	padding: 4px 0px;
+	font-family: var(--secondary-regular);
+}
+
+@media only screen and (max-width: 767px) {
+	.educard {
+		padding: 10px 0px;
+	}
+	.card{
+		background: var(--light-color);
+		border: 1px solid #5C575755;
+		border-radius: 7px;
+	}
+	.date {
+		padding: 2px 4px;
+		font-size: 12px;
+		color: var(--dark-grey);
+		font-family: var(--secondary-regular);
+	}
+	.number {
+		background: var(--primary-color);
+		color: var(--light-color);
+		font-size: 12px;
+		text-align: center;
+		padding: 4px 0px;
+		font-family: var(--secondary-regular);
+	}
+
+}

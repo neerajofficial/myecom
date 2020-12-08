@@ -1,0 +1,37 @@
+@import url('./../../../assets/styling.css');
+
+.cardSection {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 1fr 12fr 1fr;
+	padding-left: 40px;
+	text-align: center;
+	grid-gap: 30px;
+}
+.cardSection > .ppImg {
+	grid-column: 2;
+	grid-row: 1 / span 3;
+}
+.cardSection > img {
+	transition: 0.2s ease-in;
+	cursor: pointer;
+}
+.cardSection > Button:hover,
+.cardSection > img:hover {
+	transform: translateY(-2px);
+}
+.ppImg img {
+	border-radius: 200px;
+	filter: grayscale(40%);
+}
+.cardSection > Button {
+	transition: 0.2s ease-in;
+	grid-column: 2;
+	grid-row: 4;
+}
+
+@media only screen and (max-width: 767px) {
+	.cardSection {
+		padding-left: 0px;
+	}
+}

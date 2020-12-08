@@ -1,0 +1,41 @@
+@import url('./../../../assets/styling.css');
+
+.item {
+	padding: 0px 28px;
+}
+
+.item_nav {
+	color: var(--dark-color);
+	font-size: 14px;
+	display: inline;
+	border-bottom: 2px solid transparent;
+	cursor: pointer;
+	font-family: var(--secondary-bold);
+	transition: 0.2s ease;
+} 
+
+.item_nav:hover {
+	border-color: var(--secondary-color);
+}
+
+.active > .item_nav{
+	color: var(--secondary-color);
+	font-family: var(--primary-regular);
+	border-bottom: 2px solid var(--primary-color);
+}
+
+@media only screen and (max-width: 767px) {
+	.item {
+		padding: 0px 30px;
+	}
+	.item_nav {
+		border-bottom: none;
+		display: block;
+		transition: 0.2s ease-in;
+	} 
+	.active > .item_nav{
+		border-bottom: none;
+		color: var(--primary-color);
+		transform: translateX(20px);
+	}
+}

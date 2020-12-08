@@ -1,0 +1,28 @@
+@import url('./../../../assets/styling.css');
+
+.skills {
+	padding-top: 80px;
+	background: linear-gradient(-30deg, #EAFFFD 5%, transparent 70%);
+	height: 90vh;
+}
+.skills_wrap {
+	display: grid;
+	grid-template-columns: repeat(4, 2fr);
+	padding: 0px;
+	padding: 10vh 100px;
+	grid-gap: 40px;
+}
+.certSection {
+	padding: 10px;
+}
+@media only screen and (max-width: 767px) {
+	.skills {
+		padding-top: 40px;
+	}
+	.skills_wrap {
+		display: grid;
+		grid-template-columns: repeat(2, 2fr);
+		padding: 10vh 30px;
+		grid-gap: 20px;
+	}
+}

@@ -1,0 +1,47 @@
+@import url('./../../../assets/styling.css');
+
+.about {
+	padding-top: 80px;
+	background: linear-gradient(-210deg, #EAFFFD 5%, transparent 70%);
+	
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 2fr);
+	padding: 0px;
+	padding: 10vh 60px;
+	padding-bottom: 5vh;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	vertical-align: center;
+	align-items: center;
+	margin: 0;
+	padding:0; 
+}
+.certSection {
+	padding: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.about {
+		padding-top: 40px;
+		background: linear-gradient(-210deg, #EAFFFD 5%, transparent 70%);
+		
+	}
+	.grid {
+		grid-template-columns: 1fr;
+		padding: 10vh 20px;
+		padding-bottom: 5vh;
+	}
+	.container {
+		justify-content: center;
+	}
+	.certSection {
+		padding: 0px;
+		text-align: left;
+	}
+}

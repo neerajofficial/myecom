@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'MeriendaOne';
+    src:
+        local('MOR'),
+        url('./fonts/MOR.ttf')
+}
+
+@font-face {
+    font-family: 'Merienda';
+    src:
+        local('MR'),
+        url('./fonts/MR.ttf')
+}
+
+@font-face {
+    font-family: 'Meriendabold';
+    src:
+        local('MB'),
+        url('./fonts/MB.ttf')
+}
+
+:root {
+	/* ------ Color ------ */
+	--primary-color: #F63A56;
+    --secondary-color: #726DA8;
+    --dark-color: #1B2021;
+    --deep-dark: #0D1F2D;
+    --light-grey: #5C5757;
+    --dark-grey: #444444;
+    --light-color: #EAFFFD;
+
+	/* ------ Fonts ------ */
+	--primary-regular: 'MeriendaOne';
+    --secondary-regular: 'Merienda';
+    --secondary-bold: 'Meriendabold';
+}

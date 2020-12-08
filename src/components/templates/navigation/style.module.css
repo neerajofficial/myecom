@@ -1,0 +1,90 @@
+.navigationNone,
+.navigation {
+	padding: 15px 0px;
+	height: 50px;
+	margin: 0;
+	background: linear-gradient(0deg, #ffffffee 100%, transparent 100%), url('./../../../assets/images/red.png') no-repeat;
+	background-position: 50vh -22vh;
+	background-size: 200px;
+	position: absolute;
+	z-index: 9;
+	background-blend-mode: normal;
+	position: fixed;
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 2fr 5fr;
+	align-items: center;
+}
+
+.navigation_logo {
+	padding-left: 100px;
+	margin: 0;
+}
+
+.navigation_items {
+	padding-right: 0px;
+}
+.bgDrop,
+.menu {
+	display: none;
+}
+
+@media only screen and (max-width: 767px) {
+	.menu {
+		background: var(--secondary-color);
+		z-index: 8;
+		padding: 10px;
+		height: 20px;
+		width: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		border-radius: 100px;
+		bottom: 5vh;
+		right: 5vw;
+		position: fixed;
+		color: #fff;
+		font-size: 20px;
+	}
+	.bgDrop {
+		background: #0D1F2Daa;
+		width: 100vw;
+		z-index: 8;
+		display: block;
+		position: fixed;
+		height: 100vh;
+	}
+	.navigation {
+		display: block;
+		height: 45vh;
+		padding: 20px 10px;
+		background: #ffffffee;
+		z-index: 9;
+		position: fixed;
+		width: 50vw;
+		right: 5vw;
+		border-radius: 20px;
+		bottom: 12vh;
+		border: 3px solid var(--primary-color);
+	}
+	.navigation_items {
+		padding: 20px 0 0 20px;
+	}
+	.navigationNone {
+		display: none;
+
+	}
+	.navigation_logo {
+		text-align: center;
+		padding: 0px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #44444422;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.navigation {
+		height: 40vh;
+	}
+}

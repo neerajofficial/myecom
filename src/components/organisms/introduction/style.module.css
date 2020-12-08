@@ -1,0 +1,12 @@
+@import url('./../../../assets/styling.css');
+
+.introduction {
+	padding-right: 40px;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.introduction {
+		padding: 60px 10px;
+	}
+}

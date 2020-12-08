@@ -1,0 +1,31 @@
+@import url('./../../../assets/styling.css');
+
+.homeText {
+	padding: 0 40px;
+	text-align: left;
+}
+
+.buttons {
+	display: flex;
+	padding: 0px;
+	padding-top: 20px;
+	justify-content: space-between;
+}
+.buttons > Button {
+	transition: 0.2s ease-in;
+}
+.buttons > Button:hover {
+	transform: translateY(-2px);
+}
+@media only screen and (max-width: 767px) {
+	.homeText {
+		padding: 40px 20px;
+	}
+	
+	.buttons {
+		display: flex;
+		padding: 0px;
+		padding-top: 20px;
+		justify-content: space-between;
+	}
+}

@@ -1,0 +1,44 @@
+@import url('./../../../assets/styling.css');
+
+.home {
+	padding-top: 80px;
+	background: linear-gradient(30deg, #EAFFFD 5%, transparent 70%);
+	height: 90vh;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr 2fr;
+	height: 90%;
+	padding: 0px;
+	padding: 0 60px;
+}
+.textContainer,
+.image {
+	display: flex;
+	justify-content: flex-start;
+	vertical-align: center;
+	align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+	.home {
+		padding-top: 80px;
+		padding-bottom: 80px;
+		height: auto;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		height: auto;
+		padding: 0;
+	}
+	.textContainer {
+		order: 1;
+	}
+	.image {
+		justify-content: center;
+	}
+	.image img {
+		height: 320px;
+	}
+}
