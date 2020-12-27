@@ -1,0 +1,26 @@
+@import url('./../../../assets/styling.css');
+
+.cartBox {
+	background: var(--white-color);
+	border-radius: 100px;	
+	cursor: pointer;
+	padding: 4px 2px;
+}
+
+.flex {
+	align-items: center;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 3px;
+	justify-content: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-gap: 6px;
+	justify-content: center;
+	align-content: center;
+}
+

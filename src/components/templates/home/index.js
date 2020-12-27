@@ -1,23 +1,52 @@
 import React from 'react'
-import img from './../../../assets/images/illustration.png'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import styles from './style.module.css'
 
-import HomeText from './../../organisms/homeText'
+import Header from './../../organisms/header'
+import Items from './../../organisms/items'
+import Navigation from './../../organisms/navigation'
+import Modal from './../../organisms/modal'
+import Backdrop from './../../organisms/backdrop'
 
-const Home = () => {
+const Home = React.memo(props => {
+	const { 
+		modalShow, 
+		toggleModal, 
+		navLinks
+	} = props;
+
 	return (
-		<div className={styles.home} id="home">
-		<div className={styles.grid}>
-			<div className={styles.textContainer}>
-				<HomeText />
+		<div className={styles.home}>
+			{ modalShow 
+				? (
+					<React.Fragment>
+					<Backdrop clicked={toggleModal} />
+					<Modal clicked={toggleModal} />
+					</React.Fragment>
+				)
+				: null 
+			}
+			<Header toggleModal={toggleModal} />
+			
+			<div className={styles.grid}>
+				<Navigation 
+					navLinks={navLinks} />
+				<Switch>
+					{ navLinks.map(nav => (
+						<Route
+							key={nav.id}
+							path={`/${nav.categoryName}`}
+							render={props => (
+								<Items 
+									pathname={nav.categoryName}
+									{...props} />	
+							)} />
+					))}
+					<Redirect to="/fruits" />
+				</Switch>
 			</div>
-			<div>&nbsp;</div>
-			<div className={styles.image}>
-				<img src={img} alt="illustration" height="400px" />
-			</div>
-		</div>
 		</div>
 	)
-}
+})
 
 export default Home

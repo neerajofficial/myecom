@@ -1,0 +1,27 @@
+@import url('./../../../assets/styling.css');
+
+/* sizes */
+.medium {
+	font-size: 16px;
+}
+
+.small {
+	font-size: 12px;
+}
+
+/* theme */
+.secondary {
+	color: var(--secondary-color);
+}
+
+.secondary--round {
+	align-items: center;
+	background: var(--secondary-color);
+	border-radius: 100px;
+	color: var(--white-color);
+	display: flex;
+	justify-content: center;
+	height: 15px;
+	padding: 2px;
+	width: 15px;
+}

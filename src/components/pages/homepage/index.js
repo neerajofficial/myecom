@@ -1,20 +1,33 @@
-import React, { Fragment } from 'react'
-
-import Navigation from './../../templates/navigation'
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import ErrorPage from './../error'
 import Home from './../../templates/home'
-import About from './../../templates/about'
-import Skills from './../../templates/skills'
-// import Work from './../../templates/work'
-import Contact from './../../templates/contact'
+import { navLinks } from './navLinks'
 
-const Homepage = () => (
-	<Fragment>
-		<Navigation /> 
-		<Home />
-		<About />
-		<Skills />
-		<Contact />
-	</Fragment>
-)
+const HomePage = props => {
+	const { error } = props;
 
-export default Homepage
+	const [modalShow, setModal] = useState(false);
+	
+	const toggleModal = () => setModal(!modalShow);
+
+	return (
+	<React.Fragment>
+		{ error 
+			? <ErrorPage text={error} />
+			: <Home 
+				toggleModal={toggleModal}
+				modalShow={modalShow}
+				navLinks={navLinks} /> 
+		}
+	</React.Fragment>
+	)
+}
+
+const mapStateToProps = state => {
+	return {
+		error: state.items.error
+	}
+}
+
+export default connect(mapStateToProps)(HomePage);

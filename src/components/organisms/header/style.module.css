@@ -1,0 +1,31 @@
+@import url('./../../../assets/styling.css');
+
+.grid {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 7fr 1fr;
+}
+
+.header {
+	background: linear-gradient(-65deg, var(--primary-color) 2%, var(--secondary-color) 100%);
+	padding: 20px 30px;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.grid {
+		grid-template-columns: 5fr 2fr;
+	}
+}
+
+@media only screen and (max-width: 567px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+	.header {
+		position: fixed;
+		width: 90%;
+		background: linear-gradient(-65deg, var(--primary-color) 2%, var(--secondary-color) 100%);
+		padding: 20px 5%x;
+	}
+}

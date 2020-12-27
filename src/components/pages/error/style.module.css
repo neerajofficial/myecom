@@ -1,0 +1,16 @@
+@import url('./../../../assets/styling.css');
+
+.errorPage {
+	background: var(--light-grey);
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.textBox {
+	color: var(--white-color);
+	background: var(--secondary-color);
+	font-size: 2rem;
+	padding: 1rem;
+}

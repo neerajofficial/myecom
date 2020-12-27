@@ -3,12 +3,15 @@ import React from 'react'
 import styles from './style.module.css'
 
 const Button = props => {
-	const {children} = props;
-	const styleProp = [styles.button, styles[props.theme], styles[props.size]].join(' ');
-	
+	const { size, theme, clicked, value } = props;
+	const buttonStyle = [styles[size], styles[theme]].join(' ');
+
 	return (
-		<button className={styleProp} {...props}>
-			{children}
+		<button
+			className={buttonStyle}
+			onClick={event => clicked()}
+			>
+				{value}
 		</button>
 	)
 }
