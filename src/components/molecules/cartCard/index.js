@@ -4,7 +4,6 @@ import styles from './style.module.css'
 
 import Image from './../../atoms/image'
 import Text from './../../atoms/text'
-import Button from './../../atoms/button'
 import Icon from './../../atoms/icon'
 
 const IMAGE_PATH = '/images/items/';

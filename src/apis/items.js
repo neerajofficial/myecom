@@ -1,7 +1,9 @@
 import axios from 'axios'
 
+const baseURL = process.env.REACT_APP_SERVER_API;
+
 const instance = axios.create({
-    baseURL: 'https://myecom-neeraj-default-rtdb.firebaseio.com/'
+    baseURL: baseURL
 })
 
 export default instance;

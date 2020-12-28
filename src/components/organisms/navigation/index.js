@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { NavLink } from 'react-router-dom'
 
@@ -7,7 +7,7 @@ import styles from './style.module.css'
 import Text from './../../atoms/text'
 
 const Navigation = props => {
-	const { navLinks, clicked } = props;
+	const { navLinks } = props;
 	
 	return (
 		<div className={styles.navigation}>
